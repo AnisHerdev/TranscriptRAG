@@ -12,7 +12,7 @@ TranscriptRAG is a simple Retrieval-Augmented Generation (RAG) chatbot that leve
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/TranscriptRAG.git
+git clone https://github.com/AnisHerdev/TranscriptRAG.git
 cd TranscriptRAG
 ```
 
