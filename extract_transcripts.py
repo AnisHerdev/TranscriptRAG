@@ -1,5 +1,12 @@
 import os
 from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api.proxies import WebshareProxyConfig
+
+
+yttAPI = YouTubeTranscriptApi(proxy_config=WebshareProxyConfig(
+        proxy_username="<proxy-username>",
+        proxy_password="<proxy-password>",
+    ))
 
 def get_video_id(url):
     """Extracts the video ID from a YouTube URL."""
@@ -25,7 +32,8 @@ def main():
             print(f"Could not extract video ID from: {link}")
             continue
         try:
-            transcript = YouTubeTranscriptApi.get_transcript(video_id)
+            transcript = yttAPI.get_transcript(video_id)
+            print(transcript)
             text = ' '.join([entry['text'] for entry in transcript])
             all_transcripts.append(f"--- Transcript for {link} ---\n{text}\n")
             print(f"Extracted transcript for {link}")

@@ -6,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 
 TRANSCRIPTS_FILE = 'transcripts.txt'
 CHUNK_SIZE = 300  # Number of words per chunk
-TOP_K = 3  # Number of relevant chunks to retrieve
+TOP_K = 2  # Number of relevant chunks to retrieve
 
 def chunk_text(text, chunk_size=CHUNK_SIZE):
     words = text.split()
